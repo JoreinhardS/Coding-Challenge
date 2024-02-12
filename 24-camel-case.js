@@ -25,3 +25,9 @@ String.prototype.camelCase = function() {
 };
 
 console.log('test case'.camelCase())
+
+
+
+String.prototype.camelCase = function () {
+    return this.trim().replace(/(?:^|\s+)(\w)/g, (_, c) => c.toUpperCase())
+}
